@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>twitter</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	
+	<servlet>
+		<servlet-name>loginpath</servlet-name>
+		<servlet-class>login.LinkedinLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginpath</servlet-name>
+		<url-pattern>/loginpath</url-pattern>
+	</servlet-mapping>	
+	
+		<servlet>
+		<servlet-name>linkedinloggedpath</servlet-name>
+		<servlet-class>login.LinkedinResponse</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>linkedinloggedpath</servlet-name>
+		<url-pattern>/linkedin/redirect</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>DataControl</servlet-name>
+		<servlet-class>login.DataController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DataControl</servlet-name>
+		<url-pattern>/data/control</url-pattern>
+	</servlet-mapping>	
+
+  
+	
+	</web-app>
